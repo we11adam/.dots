@@ -1,0 +1,10 @@
+*
+!.gitignore
+!.vimrc
+!.vim
+!.zshrc
+!.alias
+!.inputrc
+!.subversion
+!.gitconfig
+.netrwhist

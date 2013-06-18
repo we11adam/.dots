@@ -1,0 +1,49 @@
+[user]
+	name = Adam Lau
+	email = skyros@gmail.com
+[push]
+    default = matching
+[mergetool]
+	keepBackup = true
+[merge]
+    tool = vimdiff
+[core]
+    editor = vim
+    filemode = false
+[alias]
+    visual = !stree
+    co = checkout
+    rl = reflog
+    br = branch
+    ci = commit
+    st = status
+    unstage = reset HEAD --
+    pl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    last = log -1 HEAD
+    pushall = "!f(){ for i in `git remote`; do git push $i; done; };f"
+	h = help
+	d = diff --minimal -w
+[help]
+    autocorrect = 0
+[color]
+    ui = true
+	status = true
+	grep = true
+	interactive = true
+    branch = true
+    diff = true
+    decorate = true
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
