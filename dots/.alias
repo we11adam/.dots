@@ -1,0 +1,171 @@
+alias ka="killall -9"
+alias psg='ps aux | grep -i'
+alias netg='netstat -an | grep'
+alias routes='netstat -nr'
+alias ll="ls -laHh"
+alias lag="ls -la | grep -i"
+alias grep="grep -i"
+alias g="grep -i"
+alias fgrep="fgrep -i"
+alias fg="fgrep -i"
+alias top="htop"
+alias c='ssh -l app '
+alias sci="ssh-copy-id"
+alias ka='killall'
+alias psg='ps aux | grep'
+alias wcl="wc -l"
+alias route="sudo route"
+alias su="sudo su"
+alias ping="ping -c 4"
+alias p="\ping"
+alias wget="wget --content-disposition"
+alias xs='cd `pwd -P`' # exit symbolic path
+alias path="echo $PATH |tr -s ':' '\n'"
+alias pwdp='pwd -P'
+alias mysql=/usr/local/mysql/bin/mysql
+alias sshued="ssh admin@10.235.176.73"
+#List top ten largest files/directories in current directory 
+alias ducks='du -cks *|sort -rn|head -11'
+alias zshcfg="vim ~/.zshrc"
+alias sshcfg="vim ~/.ssh/config"
+alias vikh="vim ~/.ssh/known_hosts"
+alias -g L="|less" # Write L after a command to page through the output.
+alias -g TL='| tail -10'
+alias -g NUL="> /dev/null 2>&1" # You get the idea.
+alias -s html=vim
+#alias type="whence -p"
+
+
+# git
+alias gca="git commit -a"
+alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gd="git diff -w --minimal"
+alias ga="git add"
+alias gbd="git branch -D"
+alias gst="git status"
+alias gm="git merge --no-ff"
+alias gpt="git push --tags"
+alias gp="git push"
+alias grh="git reset --hard"
+alias gb="git branch"
+alias gcob="git checkout -b"
+alias gco="git checkout"
+alias gba="git branch -a"
+alias gcp="git cherry-pick"
+alias gpom="git pull origin master"
+alias gcd='cd "`git rev-parse --show-toplevel`"'
+
+
+function gitinfo () {
+#!/bin/bash
+
+pushd . >/dev/null
+
+# Find base of git directory
+while [ ! -d .git ] && [ ! `pwd` = "/" ]; do cd ..; done
+
+# Show various information about this git directory
+if [ -d .git ]; then
+    echo "== Remote URL: `git remote -v`"
+
+        echo "== Remote Branches: "
+        git branch -r
+        echo
+
+        echo "== Local Branches:"
+        git branch
+        echo
+
+        echo "== Configuration (.git/config)"
+        cat .git/config
+        echo
+
+        echo "== Most Recent Commit"
+        git log --max-count=1
+        echo
+
+        echo "Type 'git log' for more commits, or 'git show' for full commit details."
+else
+    echo "Not a git repository."
+        fi
+
+        popd >/dev/null
+}
+
+
+# dir travel
+# get rid of command not found
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias .6='cd ../../../../../../'
+alias .7='cd ../../../../../../../'
+alias .8='cd ../../../../../../../../'
+
+# Inspect network activities
+function spy () {
+    lsof -i -P +c 0 +M | grep -i "$1"
+}
+
+function manp ()  {
+    man $1 -t | open -f -a Preview
+}
+
+
+# Quicker way to edit hosts
+function vih () {
+    [ -f /etc/hosts.ac ] && sudo rm /etc/hosts.ac;
+    sudo vim /etc/hosts;
+    [ -f /etc/hosts.ac ] && sudo rm /etc/hosts.ac;
+}
+
+
+# Quick way to edit & apply aliases
+function via () {
+    vim ~/.alias && source ~/.alias
+    echo "~/.alias applied"
+}
+
+
+# Quick way to edit .gitignore
+function vigi () {
+    vim .gitignore
+}
+
+
+function fixa () {
+    rm -rf assets/ && mv assets-1/ assets/;
+}
+
+function mcd () {
+  mkdir -vp "$1" && cd "$1";
+}
+
+function sshj () {
+     ssh jianfei@$1
+}
+
+# List files by a specified extension
+function lsext () {
+    find . -type f -iname '*.'${1}'' -exec ls -l {} \; ;
+}
+
+# who uses port
+function wup (){
+    lsof -i tcp:$1
+}
+
+
+function cpkey () {
+  pbcopy < $HOME/.ssh/id_rsa.pub;
+  echo "Your public key ~/.ssh/id_rsa.pub is now in the clipboard."
+}
+
+
+function fgi (){
+    git config user.name "渐飞";
+    git config user.email "jianfei@taobao.com";
+}
