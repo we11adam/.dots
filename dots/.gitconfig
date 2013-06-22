@@ -11,7 +11,7 @@
     editor = vim
     filemode = false
 [alias]
-    visual = !stree
+    ui = !stree
     co = checkout
     rl = reflog
     br = branch
