@@ -40,6 +40,7 @@ alias rmrf="rm -rf"
 
 
 # git
+alias gitcfg="vim ~/.gitconfig"
 alias gca="git commit -a"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gd="git diff -w --minimal"
