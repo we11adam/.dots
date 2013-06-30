@@ -12,7 +12,6 @@ alias top="htop"
 alias c='ssh -l app '
 alias sci="ssh-copy-id"
 alias ka='killall'
-alias psg='ps aux | grep'
 alias wcl="wc -l"
 alias route="sudo route"
 alias su="sudo su"
@@ -44,6 +43,7 @@ alias gitcfg="vim ~/.gitconfig"
 alias gca="git commit -a"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gd="git diff -w --minimal"
+alias gdc="git diff -w --minimal --cached"
 alias ga="git add"
 alias gbd="git branch -D"
 alias gst="git status"

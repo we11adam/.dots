@@ -39,22 +39,25 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(osx brew git git-extras gitfast ruby rails4 rvm tmux)
 
-source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Applications/Araxis\ Merge.app/Contents/Utilities
-export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 export GREP_OPTIONS='--color=auto'
+export LS_OPTIONS='--color=auto'
 #export LANG="zh_CN.UTF-8"
 #export LC_ALL="zh_CN.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_MESSAGES="UTF-8"
 export LESS='-F -g -i -M -R -S -w -X -z-4'
+#export LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:*.deb=90'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 if [ -f $HOME/.zshhl/zsh-syntax-highlighting.zsh ]; then
 . $HOME/.zshhl/zsh-syntax-highlighting.zsh
 fi
@@ -62,3 +65,7 @@ fi
 source $HOME/.alias
 source $HOME/.shex
 __rvm_project_rvmrc
+
+
+
+source $ZSH/oh-my-zsh.sh
