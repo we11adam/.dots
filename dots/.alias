@@ -36,6 +36,7 @@ alias -s html=vim
 alias type="nocorrect type"
 alias svn="nocorrect svn"
 alias rmrf="rm -rf"
+alias pc="proxychains4"
 
 
 # git
