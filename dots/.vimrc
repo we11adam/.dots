@@ -1,5 +1,6 @@
 syn on                      "语法支持
 colorscheme smyck
+filetype plugin on
 
 "common conf {{             通用配置
 set ai                      "自动缩进
@@ -19,6 +20,7 @@ set hls                     "检索时高亮显示匹配项
 set helplang=cn             "帮助系统设置为中文
 "set foldmethod=syntax       "代码折叠
 
+cmap w!! w !sudo tee > /dev/null %
 nmap mm :%s/\r//g<cr>
 inoremap <F9> <C-O>za
 nnoremap <F9> za
