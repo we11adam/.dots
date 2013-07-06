@@ -5,7 +5,6 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="random"
 ZSH_THEME="dstufft"
 
 # Example aliases
@@ -41,7 +40,7 @@ plugins=(osx brew git git-extras gitfast ruby rails4 rvm tmux)
 
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
@@ -66,7 +65,6 @@ source $HOME/.alias
 source $HOME/.shex
 __rvm_project_rvmrc
 
-
-
 source $ZSH/oh-my-zsh.sh
+
 [[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh

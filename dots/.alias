@@ -172,7 +172,7 @@ function cpkey () {
 }
 
 
-function fgi (){
+function fixgit (){
     git config user.name "渐飞";
     git config user.email "jianfei@taobao.com";
 }
