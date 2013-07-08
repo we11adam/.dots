@@ -36,7 +36,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx brew git git-extras gitfast ruby rails4 rvm tmux)
+plugins=(osx brew git git-extras gitfast ruby rails4 rvm tmux zsh-syntax-highlighting)
 
 
 # Customize to your needs...
@@ -57,9 +57,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-if [ -f $HOME/.zshhl/zsh-syntax-highlighting.zsh ]; then
-. $HOME/.zshhl/zsh-syntax-highlighting.zsh
-fi
 
 source $HOME/.alias
 source $HOME/.shex
