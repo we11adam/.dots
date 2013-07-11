@@ -51,6 +51,7 @@ export LS_OPTIONS='--color=auto'
 export LC_ALL="en_US.UTF-8"
 export LC_MESSAGES="UTF-8"
 export LESS='-F -g -i -M -R -S -w -X -z-4'
+export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig
 #export LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:*.deb=90'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
