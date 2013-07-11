@@ -61,8 +61,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 source $HOME/.alias
 source $HOME/.shex
-__rvm_project_rvmrc
 
 source $ZSH/oh-my-zsh.sh
 
 [[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
