@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="dstufft"
 
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
+alias zshcfg="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 #source $HOME/Projects/git/contrib/completion/git-completion.bash

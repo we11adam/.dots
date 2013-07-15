@@ -26,7 +26,6 @@ alias sshued="ssh admin@10.235.176.73"
 alias sshdetail="ssh jianfei@10.125.205.222"
 #List top ten largest files/directories in current directory 
 alias ducks='du -cks *|sort -rn|head -11'
-alias zshcfg="vim ~/.zshrc"
 alias sshcfg="vim ~/.ssh/config"
 alias vikh="vim ~/.ssh/known_hosts"
 alias -g L="|less" # Write L after a command to page through the output.
