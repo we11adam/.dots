@@ -17,6 +17,7 @@ alias route="sudo route"
 alias su="sudo su"
 alias ping="ping -c 4"
 alias p="\ping"
+alias t="touch"
 alias wget="wget --content-disposition"
 alias xs='cd `pwd -P`' # exit symbolic path
 alias path="echo $PATH |tr -s ':' '\n'"
