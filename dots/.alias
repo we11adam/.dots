@@ -39,7 +39,7 @@ alias rmrf="rm -rf"
 alias pc="proxychains4"
 alias bu="brew update && brew upgrade"
 alias nginx="sudo nginx"
-
+alias jenkins="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
 
 
 # git
