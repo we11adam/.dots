@@ -22,7 +22,9 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
-#
+
+# Upgrade Oh My Zsh silently.
+DISABLE_UPDATE_PROMPT=true
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
