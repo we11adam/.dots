@@ -21,7 +21,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=1
 
 # Upgrade Oh My Zsh silently.
 DISABLE_UPDATE_PROMPT=true
