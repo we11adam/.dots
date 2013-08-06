@@ -62,7 +62,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 source $HOME/.alias
-source $HOME/.shex
+[[ -s "$HOME/.shex" ]] && source $HOME/.shex
 
 source $ZSH/oh-my-zsh.sh
 
