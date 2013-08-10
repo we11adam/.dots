@@ -42,6 +42,9 @@ alias nginx="sudo nginx"
 alias jenkins="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
 
 
+alias svnrv="svn st |grep ^M |awk '{print \$2}' |xargs svn revert"
+
+
 # git
 alias gitcfg="vim ~/.gitconfig"
 alias gca="git commit -a"
