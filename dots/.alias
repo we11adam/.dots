@@ -52,6 +52,7 @@ alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgree
 alias gd="git diff -w --minimal"
 alias gdc="git diff -w --minimal --cached"
 alias ga="git add"
+alias gap="git add -p"
 alias gbd="git branch -D"
 alias gst="git status"
 alias gm="git merge --no-ff"
