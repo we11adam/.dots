@@ -1,5 +1,5 @@
 syn on                      "语法支持
-colorscheme smyck
+"colorscheme smyck
 filetype plugin on
 
 "common conf {{             通用配置
