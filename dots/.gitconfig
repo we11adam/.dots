@@ -24,6 +24,7 @@
     pushall = "!f(){ for i in `git remote`; do git push $i; done; };f"
 	h = help
 	md = diff --minimal -w
+	amend = commit --amend
 [help]
     autocorrect = 0
 [color]
