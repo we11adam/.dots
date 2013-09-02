@@ -21,7 +21,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
-export UPDATE_ZSH_DAYS=1
+export UPDATE_ZSH_DAYS=7
 
 # Upgrade Oh My Zsh silently.
 DISABLE_UPDATE_PROMPT=true
@@ -38,7 +38,7 @@ DISABLE_UPDATE_PROMPT=true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx brew git git-extras gitfast ruby rails4 rvm zsh-syntax-highlighting)
+plugins=(osx brew git git-extras gitfast ruby rails4 rvm autojump zsh-syntax-highlighting)
 
 
 # Customize to your needs...
