@@ -1,9 +1,9 @@
 alias ka="killall -9"
-alias psg='ps aux | grep -i'
+alias psg='ps aux | grep'
 alias netg='netstat -an | grep'
 alias routes='netstat -nr'
 alias ll="ls -laHh"
-alias lag="ls -la | grep -i"
+alias lag="ls -la | grep"
 alias grep="grep -i"
 alias g="grep -i"
 alias fgrep="fgrep -i"
