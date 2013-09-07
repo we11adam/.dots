@@ -25,6 +25,7 @@
 	h = help
 	md = diff --minimal -w
 	amend = commit --amend
+	l3 = log -3
 [help]
     autocorrect = 0
 [color]
