@@ -68,3 +68,8 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+
+# zsh options
+setopt NO_NOMATCH
+
