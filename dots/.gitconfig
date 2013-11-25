@@ -1,10 +1,10 @@
 [user]
-	name = Adam Lau
-	email = skyros@gmail.com
+    name = Adam Lau
+    email = skyros@gmail.com
 [push]
-    default = matching
+    default = current
 [mergetool]
-	keepBackup = true
+    keepBackup = true
 [merge]
     tool = vimdiff
 [core]
@@ -22,17 +22,18 @@
     pl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     last = log -1 HEAD
     pushall = "!f(){ for i in `git remote`; do git push $i; done; };f"
-	h = help
-	md = diff --minimal -w
-	amend = commit --amend
-	l3 = log -3
+    h = help
+    md = diff --minimal -w
+    amend = commit --amend
+    l3 = log -3
+    tagv = tag | sort -V
 [help]
-    autocorrect = 0
+    autocorrect = 1
 [color]
     ui = true
-	status = true
-	grep = true
-	interactive = true
+    status = true
+    grep = true
+    interactive = true
     branch = true
     diff = true
     decorate = true
@@ -50,3 +51,7 @@
     added = green bold
     changed = yellow bold
     untracked = red bold
+[rerere]
+    enabled = true
+[pull]
+    default = current
