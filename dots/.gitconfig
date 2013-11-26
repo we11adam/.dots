@@ -26,7 +26,7 @@
     md = diff --minimal -w
     amend = commit --amend
     l3 = log -3
-    tagv = tag | sort -V
+    tv = !git tag | sort -V
 [help]
     autocorrect = 1
 [color]
