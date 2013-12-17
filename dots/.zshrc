@@ -24,7 +24,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 export UPDATE_ZSH_DAYS=7
 
 # Upgrade Oh My Zsh silently.
-DISABLE_UPDATE_PROMPT=true
+DISABLE_UPDATE_PROMPT=false
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
