@@ -1,5 +1,7 @@
+alias o="open"
 alias ka="killall -9"
 alias psg='ps aux | grep'
+alias ag="ag --ignore *-min.*"
 alias netg='netstat -an | grep'
 alias routes='netstat -nr'
 alias ll="ls -laHh"
