@@ -6,12 +6,11 @@
 [mergetool]
     keepBackup = true
 [merge]
-	tool = sourcetree
+    tool = sourcetree
 [core]
     editor = vim
     filemode = false
     pager = less
-	excludesfile = /Users/Adam/.gitignore_global
 [alias]
     ui = !stree
     co = checkout
@@ -30,7 +29,7 @@
     amend = commit --amend
     l3 = log -3
     tv = !git tag | sort -V
-	wc = whatchanged
+    wc = whatchanged
 [help]
     autocorrect = 1
 [color]
@@ -60,8 +59,8 @@
 [pull]
     default = current
 [difftool "sourcetree"]
-	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE
-	path = 
+    cmd = /usr/local/bin/bcomp $LOCAL $REMOTE
+    path = 
 [mergetool "sourcetree"]
-	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED
-	trustExitCode = true
+    cmd = /usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED
+    trustExitCode = true

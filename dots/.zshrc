@@ -72,4 +72,5 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh options
 setopt NO_NOMATCH
+rm -f ~/.zcompdump*
 
