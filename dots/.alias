@@ -39,9 +39,10 @@ alias type="nocorrect type"
 alias svn="nocorrect svn"
 alias rmrf="rm -rf"
 alias pc="proxychains4"
+alias axel="axel -a"
 alias bu="brew update && brew upgrade"
 alias nginx="sudo nginx"
-alias jenkins="java -jar /usr/local/opt/jenkins/libexec/jenkins.war"
+alias sfs="sshfs"
 
 
 alias svnrv="svn st |grep ^M |awk '{print \$2}' |xargs svn revert"
