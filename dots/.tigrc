@@ -1,0 +1,3 @@
+set show-id = true
+set show-date = relative
+bind generic I !@sh -c "echo  %(commit) | tr '\n' ' ' | pbcopy"
