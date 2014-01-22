@@ -31,12 +31,14 @@ alias sshdetail="ssh jianfei@10.125.205.222"
 alias ducks='du -cks *|sort -rn|head -11'
 alias sshcfg="vim ~/.ssh/config"
 alias vikh="vim ~/.ssh/known_hosts"
+alias v="vim"
 alias -g L="|less" # Write L after a command to page through the output.
 alias -g TL='| tail -10'
 alias -g NUL="> /dev/null 2>&1" # You get the idea.
 alias -s html=vim
 alias type="nocorrect type"
 alias svn="nocorrect svn"
+alias rm="/usr/local/bin/safe-rm"
 alias rmrf="rm -rf"
 alias pc="proxychains4"
 alias axel="axel -a"
@@ -69,6 +71,9 @@ alias gba="git branch -a"
 alias gcp="git cherry-pick"
 alias gpom="git pull origin master"
 alias gcd='cd "`git rev-parse --show-toplevel`"'
+alias gpl="git pl"
+alias gs="git svn"
+alias ta="tig --all"
 
 
 function gitinfo () {

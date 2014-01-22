@@ -1,6 +1,6 @@
 [user]
-	name = Adam Lau
-	email = skyros@gmail.com
+    name = Adam Lau
+    email = skyros@gmail.com
 [push]
     default = current
 [mergetool]
@@ -10,12 +10,12 @@
 [core]
     editor = vim
     filemode = false
-    pager = less
+    pager = less -F -X -I
 [alias]
     ui = !stree
     co = checkout
     rl = reflog
-    rbi = rebase -i
+    ri = rebase -i
     br = branch
     ci = commit
     st = status
