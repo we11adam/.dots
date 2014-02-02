@@ -38,7 +38,7 @@ DISABLE_UPDATE_PROMPT=false
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx brew git git-extras gitfast npm ruby rails rvm autojump zsh-syntax-highlighting)
+plugins=(osx brew git git-extras gitfast npm ruby rails rvm autojump sudo zsh-syntax-highlighting)
 
 
 # Customize to your needs...

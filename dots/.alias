@@ -71,6 +71,7 @@ alias gba="git branch -a"
 alias gcp="git cherry-pick"
 alias gpom="git pull origin master"
 alias gcd='cd "`git rev-parse --show-toplevel`"'
+alias grp='git rev-parse'
 alias gpl="git pl"
 alias gs="git svn"
 alias ta="tig --all"
