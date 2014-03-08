@@ -76,6 +76,14 @@ alias gpl="git pl"
 alias gs="git svn"
 alias ta="tig --all"
 
+function swap()         
+{
+    local TMPFILE=tmp.$$
+        mv "$1" $TMPFILE
+        mv "$2" "$1"
+        mv $TMPFILE "$2"
+        echo "File names swapped."
+}
 
 function gitinfo () {
 #!/bin/bash
