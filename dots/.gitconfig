@@ -2,7 +2,7 @@
 	name = Adam Lau
 	email = skyros@gmail.com
 [push]
-    default = current
+    default = simple
 [mergetool]
 	keepBackup = true
 [merge]
@@ -21,8 +21,8 @@
     st = status
     cfg = config --global
     unstage = reset HEAD --
-    pl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-    last = log -1 HEAD
+    graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    last = log -1 --name-status HEAD
     pushall = "!f(){ for i in `git remote`; do git push $i; done; };f"
     h = help
     md = diff --minimal -w
@@ -31,7 +31,7 @@
     tv = !git tag | sort -V
     wc = whatchanged
 [help]
-    autocorrect = 1
+    autocorrect = 0
 [color]
     ui = true
     status = true
@@ -57,10 +57,13 @@
 [rerere]
     enabled = true
 [pull]
-    default = current
+    default = simple
 [difftool "sourcetree"]
     cmd = /usr/local/bin/bcomp $LOCAL $REMOTE
     path = 
 [mergetool "sourcetree"]
     cmd = /usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED
     trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
