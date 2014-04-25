@@ -2,7 +2,7 @@
 	name = Adam Lau
 	email = skyros@gmail.com
 [push]
-    default = simple
+    default = current
 [mergetool]
 	keepBackup = true
 [merge]
@@ -11,6 +11,7 @@
     editor = vim
     filemode = false
     pager = less -F -X -I
+	excludesfile = ~/.gitignore
 [alias]
     ui = !stree
     co = checkout
@@ -30,6 +31,8 @@
     l3 = log -3
     tv = !git tag | sort -V
     wc = whatchanged
+	today = log --since=midnight --author='jianfei' --oneline
+	week = log --since='1 week ago' --author='jianfei' --oneline
 [help]
     autocorrect = 0
 [color]
@@ -57,7 +60,7 @@
 [rerere]
     enabled = true
 [pull]
-    default = simple
+    default = current
 [difftool "sourcetree"]
     cmd = /usr/local/bin/bcomp $LOCAL $REMOTE
     path = 
