@@ -121,6 +121,8 @@ else
         popd >/dev/null
 }
 
+alias pon="set -g -x https_proxy http://127.0.0.1:1080; set -g -x http_proxy http://127.0.0.1:1080;"
+
 
 # dir travel
 # get rid of command not found
@@ -187,6 +189,9 @@ function wup (){
     lsof -i tcp:$1
 }
 
+function hsrv (){
+nohup ruby -run -e httpd . -p $1 > /dev/null 2>&1 &
+}
 
 function cpkey () {
   pbcopy < $HOME/.ssh/id_rsa.pub;

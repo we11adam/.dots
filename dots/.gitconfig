@@ -35,6 +35,8 @@
 	week = log --since='1 week ago' --author='jianfei' --oneline
 [help]
     autocorrect = 0
+[log]
+    date = local
 [color]
     ui = true
     status = true

@@ -38,7 +38,7 @@ DISABLE_UPDATE_PROMPT=false
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx brew git git-extras gitfast npm ruby rails rvm autojump sudo tmux zsh-syntax-highlighting)
+plugins=(osx brew git git-extras npm nvm autojump sudo per-directory-history zsh-syntax-highlighting)
 
 
 # Customize to your needs...
@@ -62,12 +62,11 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 source $HOME/.alias
-[[ -s "$HOME/.shex" ]] && source $HOME/.shex
 
 source $ZSH/oh-my-zsh.sh
 
 [[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.shex" ]] && source $HOME/.shex
 
 
 # zsh options
