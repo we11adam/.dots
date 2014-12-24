@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+#export SHELL=/usr/local/bin/zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -10,9 +11,6 @@ ZSH_THEME="dstufft"
 # Example aliases
 alias zshcfg="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-
-#source $HOME/Projects/git/contrib/completion/git-completion.bash
-#source $HOME/Projects/git/contrib/completion/git-completion.zsh
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -38,26 +36,44 @@ DISABLE_UPDATE_PROMPT=false
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx brew git git-extras npm nvm autojump sudo per-directory-history zsh-syntax-highlighting)
+plugins=(
+        git
+        git-extras
+        tig
+        nvm
+        npm
+        osx
+        brew
+        autojump
+        sudo
+        history-substring-search
+        #zsh-syntax-highlighting
+        )
+
+PATH_DIRS=(
+            /usr/local/opt/coreutils/libexec/gnubin
+            /usr/local/share/npm/bin
+            /usr/local/bin
+            /usr/local/sbin
+            /usr/bin
+            /bin
+            /usr/sbin
+            /sbin
+            )
+export PATH=""
+for dir in $PATH_DIRS; do
+    if [ -d $dir ]; then
+            PATH+=$dir:
+    fi
+done
 
 
-# Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 export GREP_OPTIONS='--color=auto'
 export LS_OPTIONS='--color=auto'
-#export LANG="zh_CN.UTF-8"
-#export LC_ALL="zh_CN.UTF-8"
+export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_MESSAGES="UTF-8"
-export LESS='-F -g -i -M -R -S -w -X -z-4'
-export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig
-#export LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:*.deb=90'
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
@@ -65,7 +81,6 @@ source $HOME/.alias
 
 source $ZSH/oh-my-zsh.sh
 
-[[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
 [[ -s "$HOME/.shex" ]] && source $HOME/.shex
 
 
@@ -73,3 +88,34 @@ source $ZSH/oh-my-zsh.sh
 setopt NO_NOMATCH
 rm -f ~/.zcompdump*
 
+
+
+export NODE_ENV=local
+
+if [ -z $TMUX ]; then
+    #tmux -CC attach
+fi 
+
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;016m\E[48;5;220m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+export LESS=-Ri
+
+export EDITOR=vim
+
+autoload -U zmv
+autoload -U zrecompile
+
+
+#eval `keychain --eval ali_id_dsa`
+
+unalias run-help
+autoload run-help
+export HELPDIR=/usr/local/share/zsh/help
+
+
+source /Users/Adam/.iterm2_shell_integration.zsh

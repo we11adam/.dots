@@ -1,4 +1,5 @@
 alias o="open"
+alias m="mosh"
 alias ka="killall -9"
 alias psg='ps aux | grep'
 alias ag="ag --ignore *-min.*"
@@ -17,9 +18,7 @@ alias ka='killall'
 alias wcl="wc -l"
 alias route="sudo route"
 alias su="sudo su"
-alias ping="ping -c 4"
-alias p="\ping"
-alias t="touch"
+alias p="ping -c 10"
 alias wget="wget --content-disposition"
 alias xs='cd `pwd -P`' # exit symbolic path
 alias path="echo $PATH |tr -s ':' '\n'"
@@ -40,11 +39,17 @@ alias type="nocorrect type"
 alias svn="nocorrect svn"
 alias rm="/usr/local/bin/safe-rm"
 alias rmrf="rm -rf"
-alias pc="proxychains4"
+alias t="proxychains4 -q"
 alias axel="axel -a"
 alias bu="brew update && brew upgrade"
 alias nginx="sudo nginx"
 alias sfs="sshfs"
+alias ravz="rsync -avz"
+alias ravzp="rsync -avz --progress"
+alias flushdns="sudo discoveryutil mdnsflushcache && echo 'DNS cache flushed.'"
+alias tcc="tmux -CC"
+alias a="tmux -CC attach"
+
 
 
 alias svnrv="svn st |grep ^M |awk '{print \$2}' |xargs svn revert"
@@ -74,7 +79,10 @@ alias gcd='cd "`git rev-parse --show-toplevel`"'
 alias grp='git rev-parse'
 alias gpl="git pl"
 alias gs="git svn"
+alias gh="git help"
 alias ta="tig --all"
+
+alias nd="node-debug"
 
 function swap()         
 {
@@ -121,7 +129,7 @@ else
         popd >/dev/null
 }
 
-alias pon="set -g -x https_proxy http://127.0.0.1:1080; set -g -x http_proxy http://127.0.0.1:1080;"
+alias pon="export https_proxy=http://127.0.0.1:1080; export http_proxy=http://127.0.0.1:1080;"
 
 
 # dir travel
@@ -167,17 +175,10 @@ function vigi () {
 }
 
 
-function fixa () {
-    rm -rf assets/ && mv assets-1/ assets/;
-}
-
 function mcd () {
   mkdir -vp "$1" && cd "$1";
 }
 
-function sshj () {
-     ssh jianfei@$1
-}
 
 # List files by a specified extension
 function lsext () {
@@ -199,7 +200,12 @@ function cpkey () {
 }
 
 
-function fixgit (){
-    git config user.name "渐飞";
-    git config user.email "jianfei@taobao.com";
-}
+alias fuck='sudo $(history -p \!\!)'
+
+
+
+
+
+
+
+alias chrome='nohup env DYLD_INSERT_LIBRARIES=/Users/Adam/Assets/patch.dylib "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" > /dev/null 2>&1 &'

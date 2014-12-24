@@ -1,4 +1,4 @@
-curl -k -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+#curl -k -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 cd dots;
 for file in .*; 
 do

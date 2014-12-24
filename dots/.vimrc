@@ -1,6 +1,6 @@
 syn on                      "语法支持
 "colorscheme smyck
-filetype plugin on
+"filetype plugin on
 
 "common conf {{             通用配置
 set ai                      "自动缩进
@@ -39,4 +39,4 @@ nnoremap <leader>t : tabe<CR>
 set guifont=PowerlineSymbols\ for\ Powerline
 set nocompatible
 set t_Co=256
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
