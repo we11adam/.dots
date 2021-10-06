@@ -1,0 +1,3 @@
+bind generic K !@sh -c "echo %(commit) | cut -c1-8 | pbcopy"
+# User-defined internal command that reloads ~/.tigrc
+bind generic S :source ~/.tigrc

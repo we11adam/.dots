@@ -7,6 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="dstufft"
+#ZSH_THEME="fino"
 
 # Example aliases
 alias zshcfg="vim ~/.zshrc"
@@ -19,7 +20,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
-export UPDATE_ZSH_DAYS=7
+export UPDATE_ZSH_DAYS=15
 
 # Upgrade Oh My Zsh silently.
 DISABLE_UPDATE_PROMPT=false
@@ -40,6 +41,8 @@ plugins=(
         git
         git-extras
         tig
+		docker
+		kubectl
         nvm
         npm
         osx
@@ -47,11 +50,16 @@ plugins=(
         autojump
         sudo
         history-substring-search
-        #zsh-syntax-highlighting
-        )
+        docker
+#        zsh-syntax-highlighting
+)
 
 PATH_DIRS=(
-            /usr/local/opt/coreutils/libexec/gnubin
+            ~/.bin
+            ~/.npm-global/bin
+            #/usr/local/opt/coreutils/libexec/gnubin
+            /usr/local/opt/python/libexec/bin
+            ~/Library/Python/3.6/bin
             /usr/local/share/npm/bin
             /usr/local/bin
             /usr/local/sbin
@@ -68,18 +76,25 @@ for dir in $PATH_DIRS; do
 done
 
 
-export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+export MANPATH=/usr/local/man:/usr/local/share/man:/usr/share/man
+#export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 export GREP_OPTIONS='--color=auto'
 export LS_OPTIONS='--color=auto'
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export LC_MESSAGES="UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-
 source $HOME/.alias
-
+#set -x
 source $ZSH/oh-my-zsh.sh
+set +x
+
 
 [[ -s "$HOME/.shex" ]] && source $HOME/.shex
 
@@ -92,9 +107,9 @@ rm -f ~/.zcompdump*
 
 export NODE_ENV=local
 
-if [ -z $TMUX ]; then
-    #tmux -CC attach
-fi 
+#if [ -z $TMUX ]; then
+#    #tmux -CC attach
+#fi 
 
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
@@ -119,3 +134,20 @@ export HELPDIR=/usr/local/share/zsh/help
 
 
 source /Users/Adam/.iterm2_shell_integration.zsh
+
+tmux list-sessions 2> /dev/null 
+
+
+
+
+export HOMEBREW_GITHUB_API_TOKEN="bec762cf1949e85c1dea6f46fd92019fe1f10f8a"
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+export GOPATH=$HOME/.gopath
+
+#NODE=$(which node)
+#ln -sfv $NODE ~/.bin/node >/dev/null
+
+. "/Users/adam/.acme.sh/acme.sh.env"
+
+export CAROOT=~/.certs

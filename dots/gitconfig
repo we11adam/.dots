@@ -1,0 +1,115 @@
+[user]
+	name = Adam L
+	email = skyros@gmail.com
+[push]
+	default = current
+[mergetool]
+	keepBackup = true
+[merge]
+	tool = sourcetree
+	conflictstyle = diff3
+[core]
+	editor = vim
+	filemode = false
+	pager = less -F -X -I
+	excludesfile = /Users/Adam/.gitignore
+	quotepath = false
+[alias]
+	ui = !stree
+	co = checkout
+	cp = cherry-pick
+	uncare = update-index --assume-unchanged
+	care = update-index --no-assume-unchanged
+	rl = reflog
+	rit = rebase -i HEAD~2
+	ri = rebase -i 
+	br = branch
+	fp = fetch --prune
+	ci = commit
+	st = status
+	cfg = config --global
+	web = instaweb --httpd=webrick
+	unstage = reset HEAD --
+	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	last = log -1 --name-status HEAD
+	h = help
+	md = diff --minimal -w
+	amend = commit --amend
+	tb = commit --amend --author='渐飞 <jianfei@taobao.com>'
+	l3 = log -3
+	tv = !git tag | sort -V
+	tags = !git tag | gsort -V
+	wc = whatchanged
+	today = log --since=midnight --author='jianfei' --oneline
+	week = log --since='1 week ago' --author='jianfei' --oneline
+	export = !git archive master | tar -x -C
+	si = "!_() { curl -sL https://www.gitignore.io/api/$@,osx,linux,windows|grep -v '^#'|grep -v '^ *$';};_"
+[help]
+	autocorrect = 0
+[color]
+	ui = true
+	status = true
+	grep = true
+	interactive = true
+	branch = true
+	diff = true
+	decorate = true
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[rerere]
+	enabled = true
+[pull]
+	default = current
+	rebase = true
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	path = -ro
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[advice]
+	pushNonFastForward = false
+	statusHints = false
+	commitBeforeMerge = false
+	resolveConflict = false
+	implicitIdentity = false
+	detachedHead = false
+[credential]
+	helper = osxkeychain
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[log]
+	date = iso
+[gui]
+	encoding = utf-8
+[stash]
+	showPatch = true
+[diff]
+	tool = bc3
+	renameLimit = 99999
+[difftool "bc3"]
+	trustExitCode = true
+[commit]
+	template = /Users/adam/.stCommitMsg
