@@ -91,9 +91,7 @@ export LC_TIME="en_US.UTF-8"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 source $HOME/.alias
-#set -x
 source $ZSH/oh-my-zsh.sh
-set +x
 
 
 [[ -s "$HOME/.shex" ]] && source $HOME/.shex
@@ -126,14 +124,10 @@ autoload -U zmv
 autoload -U zrecompile
 
 
-#eval `keychain --eval ali_id_dsa`
-
 unalias run-help
 autoload run-help
 export HELPDIR=/usr/local/share/zsh/help
 
-
-source /Users/Adam/.iterm2_shell_integration.zsh
 
 tmux list-sessions 2> /dev/null 
 
@@ -148,6 +142,7 @@ export GOPATH=$HOME/.gopath
 #NODE=$(which node)
 #ln -sfv $NODE ~/.bin/node >/dev/null
 
-. "/Users/adam/.acme.sh/acme.sh.env"
+[[ -f "/Users/adam/.acme.sh/acme.sh.env" ]] && source "/Users/adam/.acme.sh/acme.sh.env"
+[[ -f "/Users/adam/.bin/iterm2_shell_integration.zsh" ]] && source "/Users/adam/.bin/iterm2_shell_integration.zsh"
 
 export CAROOT=~/.certs

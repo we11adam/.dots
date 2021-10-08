@@ -35,13 +35,11 @@ alias type="nocorrect type"
 alias svn="nocorrect svn"
 alias rm="/usr/local/bin/safe-rm"
 alias rmrf="rm -rf"
-alias t="tnpm"
 alias axel="axel -a"
-alias bu="brew update && brew upgrade"
+alias brew="https_proxy=http://127.0.0.1:2080 http_proxy=http://127.0.0.1:2080 all_proxy=socks5://127.0.0.1:6153 brew"
+alias bup=" brew update && brew upgrade"
 alias nginx="sudo nginx"
-alias sfs="sshfs"
-alias ravz="rsync -avz"
-alias ravzp="rsync -avz --progress"
+alias ravz="rsync -avz --progress"
 #alias flushdns="sudo discoveryutil mdnsflushcache && sudo discoveryutil udnsflushcaches && echo 'DNS cache flushed.'"
 alias flushdns="sudo killall -HUP mDNSResponder && echo 'DNS cache flushed.'"
 alias tcc="tmux -CC"
@@ -87,10 +85,10 @@ alias dm="docker-machine"
 function swap()
 {
     local TMPFILE=tmp.$$
-        mv "$1" $TMPFILE
-        mv "$2" "$1"
-        mv $TMPFILE "$2"
-        echo "File names swapped."
+    mv "$1" $TMPFILE
+    mv "$2" "$1"
+    mv $TMPFILE "$2"
+    echo "File names swapped."
 }
 
 function gitinfo () {
@@ -129,7 +127,6 @@ else
         popd >/dev/null
 }
 
-alias pon="export https_proxy=http://127.0.0.1:2080;export http_proxy=http://127.0.0.1:2080;export all_proxy=socks5://127.0.0.1:6153"
 
 
 # dir travel
@@ -203,69 +200,39 @@ function cpkey () {
 alias fuck='sudo $(history -p \!\!)'
 
 
-function proxy (){
-    export http_proxy="http://127.0.0.1:1080"
-    export https_proxy="http://127.0.0.1:1080"
-    echo "HTTP Proxy on"
+function pon (){
+    export https_proxy=http://127.0.0.1:2080
+    export http_proxy=http://127.0.0.1:2080
+    export all_proxy=socks5://127.0.0.1:6153
+    echo "terminal proxy on"
 }
 
-function noproxy (){
+function poff (){
     unset http_proxy
     unset https_proxy
-    echo "HTTP Proxy off"
+    unset all_proxy
+    echo "terminal proxy off"
 }
 
-function bw (){
-if [ -z $1 ]; then 
-    echo An argument is required.
-else
-    open -a Byword $1
-fi
-}
 
 function pn () {
-ping 10.0.0.$1
-}
-alias alivpn="sudo openconnect --no-cert-check -u jianfei vpn.alibaba-inc.com"
-
-function vpn (){
-
-echo "Liew8888"$1 | sudo nohup openconnect --no-cert-check -u jianfei vpn.alibaba-inc.com 1>/dev/null 2>&1 &
-
+    ping 10.0.0.$1
 }
 
 
-unrpm(){
-  rpm2cpio "$1" | cpio -idmv
-}
+
 
 alias cmcx="cmc -X"
 
 
-function upohmyzsh () {
-	upgrade_oh_my_zsh;
-	set -x
-	local _OLDPWD=$(pwd -P);
-	cd ~/.oh-my-zsh/custom/plugins;
-	for p in $(ls); do
-		echo $p;
-		cd $p;
-    	git pull >/dev/null 2>&1;
-    	cd ..;
-	done;
-	cd $_OLDPWD
-}
-
 
 function chs() {
-	defaults write $(mdls -name kMDItemCFBundleIdentifier -raw /Applications/"$1".app) AppleLanguages "(zh-Hans, zh_CN, zh, en)"
+    defaults write $(mdls -name kMDItemCFBundleIdentifier -raw /Applications/"$1".app) AppleLanguages "(zh-Hans, zh_CN, zh, en)"
 }
-
-
 
 
 alias kctl=kubectl
-alias nu="nvm use"
+
 
 function sniff (){
 	nc -z  $1 $2
@@ -279,17 +246,7 @@ function sniff (){
 
 alias vim=nvim
 
-alias tup="tnpm update"
-
 alias dokcer="docker"
 
 alias pubkey="pbcopy < $HOME/.ssh/id_rsa.pub; echo Public key is copied."
 
-function cptk () {
-	local token=`curl -s -x 127.0.0.1:1080 unifi.midway.io:3000/token |tr -d "\n"`
-	echo -n $token |pbcopy
-	echo "Token $token is copied."
-}
-
-
-alias editsurgecfg="open ~/.surge.conf -a CotEditor"
