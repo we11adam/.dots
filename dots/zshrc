@@ -1,3 +1,5 @@
+[[ -f "$HOME/.custom_env.zsh" ]] && source "$HOME/.custom_env.zsh"
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 #export SHELL=/usr/local/bin/zsh
@@ -53,27 +55,6 @@ plugins=(
         docker
 #        zsh-syntax-highlighting
 )
-
-PATH_DIRS=(
-            ~/.bin
-            ~/.npm-global/bin
-            #/usr/local/opt/coreutils/libexec/gnubin
-            /usr/local/opt/python/libexec/bin
-            ~/Library/Python/3.6/bin
-            /usr/local/share/npm/bin
-            /usr/local/bin
-            /usr/local/sbin
-            /usr/bin
-            /bin
-            /usr/sbin
-            /sbin
-            )
-export PATH=""
-for dir in $PATH_DIRS; do
-    if [ -d $dir ]; then
-            PATH+=$dir:
-    fi
-done
 
 
 export MANPATH=/usr/local/man:/usr/local/share/man:/usr/share/man
@@ -142,7 +123,7 @@ export GOPATH=$HOME/.gopath
 #NODE=$(which node)
 #ln -sfv $NODE ~/.bin/node >/dev/null
 
-[[ -f "/Users/adam/.acme.sh/acme.sh.env" ]] && source "/Users/adam/.acme.sh/acme.sh.env"
-[[ -f "/Users/adam/.bin/iterm2_shell_integration.zsh" ]] && source "/Users/adam/.bin/iterm2_shell_integration.zsh"
+[[ -f "$HOME/.acme.sh/acme.sh.env" ]] && source "$HOME/.acme.sh/acme.sh.env"
+[[ -f "$HOME/.bin/iterm2_shell_integration.zsh" ]] && source "$HOME/.bin/iterm2_shell_integration.zsh"
 
 export CAROOT=~/.certs

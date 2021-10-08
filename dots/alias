@@ -37,10 +37,9 @@ alias rm="/usr/local/bin/safe-rm"
 alias rmrf="rm -rf"
 alias axel="axel -a"
 alias brew="https_proxy=http://127.0.0.1:2080 http_proxy=http://127.0.0.1:2080 all_proxy=socks5://127.0.0.1:6153 brew"
-alias bup=" brew update && brew upgrade"
+alias bup=" brew update && brew upgrade --force-bottle && brew cleanup -s"
 alias nginx="sudo nginx"
 alias ravz="rsync -avz --progress"
-#alias flushdns="sudo discoveryutil mdnsflushcache && sudo discoveryutil udnsflushcaches && echo 'DNS cache flushed.'"
 alias flushdns="sudo killall -HUP mDNSResponder && echo 'DNS cache flushed.'"
 alias tcc="tmux -CC"
 alias a="tmux -CC attach"
@@ -220,15 +219,13 @@ function pn () {
 }
 
 
-
-
 alias cmcx="cmc -X"
 
 
-
-function chs() {
-    defaults write $(mdls -name kMDItemCFBundleIdentifier -raw /Applications/"$1".app) AppleLanguages "(zh-Hans, zh_CN, zh, en)"
-}
+# no longer useful since Catalina
+# function chs() {
+#     defaults write $(mdls -name kMDItemCFBundleIdentifier -raw /Applications/"$1".app) AppleLanguages "(zh-Hans, zh_CN, zh, en)"
+# }
 
 
 alias kctl=kubectl
@@ -250,3 +247,4 @@ alias dokcer="docker"
 
 alias pubkey="pbcopy < $HOME/.ssh/id_rsa.pub; echo Public key is copied."
 
+alias pssh='ssh -o "ProxyCommand=connect -H 127.0.0.1:2080 %h %p"'
