@@ -32,7 +32,7 @@ export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 
-export HOMEBREW_GITHUB_API_TOKEN="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"
+export HOMEBREW_GITHUB_API_TOKEN="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"
 
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
