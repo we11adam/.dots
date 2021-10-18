@@ -43,9 +43,8 @@ plugins=(
         git
         git-extras
         tig
-		docker
-		kubectl
-        nvm
+        docker
+        kubectl
         npm
         macos
         brew
