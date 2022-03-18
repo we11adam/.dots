@@ -113,3 +113,5 @@
 	trustExitCode = true
 [commit]
 	template = /Users/adam/.stCommitMsg
+[init]
+	defaultBranch = master

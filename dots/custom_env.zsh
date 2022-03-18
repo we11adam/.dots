@@ -32,6 +32,6 @@ export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 
-export HOMEBREW_GITHUB_API_TOKEN=$(echo bdYdV1AdYCTO6RLxxY6XXY8ckCMBMeD9boKS_phg | rev)
+export HOMEBREW_GITHUB_API_TOKEN=$(echo 2PnU30mflnYRYDPLpGz6ALsx42T7fAZfm2f3_phg | rev)
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
