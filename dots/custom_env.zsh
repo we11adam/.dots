@@ -36,4 +36,6 @@ export HOMEBREW_GITHUB_API_TOKEN=$(echo 2PnU30mflnYRYDPLpGz6ALsx42T7fAZfm2f3_phg
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+export GO111MODULE=on
+
 eval "$(fnm env)"
